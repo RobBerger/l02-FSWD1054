@@ -9,3 +9,7 @@ table.contacts th {
   .contactSummary {
     margin-top: 2rem;
   }
+
+  .contact .name {
+    text-transform: uppercase;
+  }
