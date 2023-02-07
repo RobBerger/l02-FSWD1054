@@ -14,10 +14,11 @@ function App() {
 
   return (
     <div className="App">
-      <ul>{contactList}</ul>
-      <div>Total Number of Contacts: {contacts.length}</div>
+      { contacts.length
+        ? <div><ul>{contactList}</ul><div>Total Number of Contacts: {contacts.length}</div></div>
+        : <div>Sorry, no contacts found :(</div>
+        }
     </div>
-  );
-}
+  )}
 
 export default App;
