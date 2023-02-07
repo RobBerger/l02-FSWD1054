@@ -1,3 +1,7 @@
 table.contacts th {
     text-align: left;
   }
+
+  table.contacts th, table.contacts td {
+    padding: 0.5rem;
+  }
