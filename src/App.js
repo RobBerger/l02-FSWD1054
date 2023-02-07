@@ -4,9 +4,9 @@ import contacts from './Contacts.js';
 import './Contact.css';
 
 function App() {
-  let contactList = contacts.map( (contact) => {
+  let contactList = contacts.map( (contact, index) => {
     return (
-      <tr className="contact">
+      <tr className={`contact ${index % 2 ? "shaded" : ""}`} >
         <td className="name">{contact.first_name} {contact.last_name}</td>
         <td className="email"><a href={`mailto:${contact.email}`}>{contact.email}</a></td>
         <td className="phone">{contact.phone}</td>
