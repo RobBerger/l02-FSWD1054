@@ -5,16 +5,16 @@ import contacts from './Contacts.js';
 function App() {
   let contactList = contacts.map( (contact) => {
     return (
-      <tr>
-        <td>{contact.first_name.toUpperCase()} {contact.last_name.toUpperCase()}</td>
-        <td><a href={`mailto:${contact.email}`}>{contact.email}</a></td>
-        <td>{contact.phone}</td>
+      <tr className="contact">
+        <td className="name">{contact.first_name.toUpperCase()} {contact.last_name.toUpperCase()}</td>
+        <td className="email"><a href={`mailto:${contact.email}`}>{contact.email}</a></td>
+        <td className="phone">{contact.phone}</td>
       </tr>
   )})
 
   return (
     <div className="App">
-      <table>
+      <table className="contacts">
         <thead>
           <tr>
             <th>Name</th>
@@ -27,7 +27,7 @@ function App() {
         </tbody>
       </table>
       { contacts.length
-        ? <div >Total Number of Contacts: {contacts.length}</div>
+        ? <div className="contactSummary">Total Number of Contacts: {contacts.length}</div>
         : <div>Sorry, no contacts found :(</div>
       }
     </div>
