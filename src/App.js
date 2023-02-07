@@ -7,7 +7,7 @@ function App() {
   let contactList = contacts.map( (contact) => {
     return (
       <tr className="contact">
-        <td className="name">{contact.first_name.toUpperCase()} {contact.last_name.toUpperCase()}</td>
+        <td className="name">{contact.first_name} {contact.last_name}</td>
         <td className="email"><a href={`mailto:${contact.email}`}>{contact.email}</a></td>
         <td className="phone">{contact.phone}</td>
       </tr>
