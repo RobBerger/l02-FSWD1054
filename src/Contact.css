@@ -17,3 +17,7 @@ table.contacts th {
   .contact.shaded {
     background-color: lightgray;
   }
+
+  table.contacts {
+    border-collapse: collapse;
+  }
