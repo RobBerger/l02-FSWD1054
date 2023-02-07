@@ -13,3 +13,7 @@ table.contacts th {
   .contact .name {
     text-transform: uppercase;
   }
+
+  .contact.shaded {
+    background-color: lightgray;
+  }
