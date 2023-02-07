@@ -5,20 +5,33 @@ import contacts from './Contacts.js';
 function App() {
   let contactList = contacts.map( (contact) => {
     return (
-    <li>
-      <div>Name: {contact.first_name.toUpperCase()} {contact.last_name.toUpperCase()}</div>
-      <div>Email: <a href={`mailto:${contact.email}`}>{contact.email}</a></div>
-      <div>Phone: {contact.phone}</div>
-    </li>
+      <tr>
+        <td>{contact.first_name.toUpperCase()} {contact.last_name.toUpperCase()}</td>
+        <td><a href={`mailto:${contact.email}`}>{contact.email}</a></td>
+        <td>{contact.phone}</td>
+      </tr>
   )})
 
   return (
     <div className="App">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+          </tr>
+        </thead>
+        <tbody>
+          {contactList}
+        </tbody>
+      </table>
       { contacts.length
-        ? <div><ul>{contactList}</ul><div>Total Number of Contacts: {contacts.length}</div></div>
+        ? <div >Total Number of Contacts: {contacts.length}</div>
         : <div>Sorry, no contacts found :(</div>
-        }
+      }
     </div>
-  )}
+  )
+}
 
 export default App;
