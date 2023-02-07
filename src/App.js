@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import contacts from './Contacts.js';
+import './Contact.css';
 
 function App() {
   let contactList = contacts.map( (contact) => {
